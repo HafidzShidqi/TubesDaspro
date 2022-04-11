@@ -63,3 +63,25 @@ def riwayatCSVToArray():
         dataRiwayat += [line_data]
 
     return dataRiwayat
+
+def InventoryCSVToArray():
+    global Inventory
+    f = open("FileCSV/inventory.csv", "r")
+    lines = f.readlines()
+    f.close()
+
+    dataInventory = []
+
+    for line in lines:
+        n = 0
+        line_data = ['']
+        for char in line:
+            if char == ';':
+                line_data += ['']
+                n += 1
+            elif char != '\n':
+                line_data[n] += char
+
+        dataInventory += [line_data]
+
+    return dataInventory
