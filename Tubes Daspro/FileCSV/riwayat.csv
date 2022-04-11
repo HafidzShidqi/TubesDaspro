@@ -1,0 +1,6 @@
+game_id;nama;harga;user_id;tahun_beli
+GAME001;BNMO - Play Along With Crypto;100000;USER001;2022
+GAME002;Dasar Pemrograman;0;USER002;2022
+GAME003;Python Gemink;69000;USER003;2022
+GAME002;Dasar Pemrograman;0;USER001;2022
+GAME003;Python Gemink;69000;USER001;2022
