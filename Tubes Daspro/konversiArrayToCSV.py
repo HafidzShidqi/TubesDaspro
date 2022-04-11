@@ -30,6 +30,23 @@ def UserArrayToCSV(lines):
 
     return stringKosong
 
+
+def RiwayatArrayToCSV(lines):
+
+    stringKosong = ''
+
+    for line in lines:
+        i = 0
+        for str in line:
+            if i < 5:
+                stringKosong += str + ';'
+                i += 1
+            else:
+                stringKosong += str
+        stringKosong += '\n'
+
+    return stringKosong
+
 # import os
 
 # path = os.getcwd()
