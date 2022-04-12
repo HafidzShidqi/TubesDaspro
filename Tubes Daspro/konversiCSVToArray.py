@@ -1,87 +1,69 @@
-def GameCSVToArray():
-    global dataGame
-    f = open("FileCSV/game.csv", "r")
-    lines = f.readlines()
-    f.close()
+from f15 import *
 
-    dataGame = []
+folderName = load() 
+if folderName != False:
+    def GameCSVToArray():
+        global dataGame
+        f = open(f"{folderName}/game.csv", "r")
+        lines = f.readlines()
+        f.close()
 
-    for line in lines:
-        n = 0
-        line_data = ['']
-        for char in line:
-            if char == ';':
-                line_data += ['']
-                n += 1
-            elif char != '\n':
-                line_data[n] += char
+        dataGame = []
 
-        dataGame += [line_data]
+        for line in lines:
+            n = 0
+            line_data = ['']
+            for char in line:
+                if char == ';':
+                    line_data += ['']
+                    n += 1
+                elif char != '\n':
+                    line_data[n] += char
 
-    return dataGame
+            dataGame += [line_data]
 
-def UserCSVToArray():
-    global dataUser
-    f = open("FileCSV/user.csv", "r")
-    lines = f.readlines()
-    f.close()
+        return dataGame
 
-    dataUser = []
+    def UserCSVToArray():
+        global dataUser
+        f = open(f"{folderName}/user.csv", "r")
+        lines = f.readlines()
+        f.close()
 
-    for line in lines:
-        n = 0
-        line_data = ['']
-        for char in line:
-            if char == ';':
-                line_data += ['']
-                n += 1
-            elif char != '\n':
-                line_data[n] += char
+        dataUser = []
 
-        dataUser += [line_data]
+        for line in lines:
+            n = 0
+            line_data = ['']
+            for char in line:
+                if char == ';':
+                    line_data += ['']
+                    n += 1
+                elif char != '\n':
+                    line_data[n] += char
 
-    return dataUser
+            dataUser += [line_data]
 
-def riwayatCSVToArray():
-    global dataRiwayat
-    f = open("FileCSV/user.csv", "r")
-    lines = f.readlines()
-    f.close()
+        return dataUser
 
-    dataRiwayat = []
+    def riwayatCSVToArray():
+        global dataRiwayat
+        f = open(f"{folderName}/user.csv", "r")
+        lines = f.readlines()
+        f.close()
 
-    for line in lines:
-        n = 0
-        line_data = ['']
-        for char in line:
-            if char == ';':
-                line_data += ['']
-                n += 1
-            elif char != '\n':
-                line_data[n] += char
+        dataRiwayat = []
 
-        dataRiwayat += [line_data]
+        for line in lines:
+            n = 0
+            line_data = ['']
+            for char in line:
+                if char == ';':
+                    line_data += ['']
+                    n += 1
+                elif char != '\n':
+                    line_data[n] += char
 
-    return dataRiwayat
+            dataRiwayat += [line_data]
 
-def InventoryCSVToArray():
-    global Inventory
-    f = open("FileCSV/inventory.csv", "r")
-    lines = f.readlines()
-    f.close()
-
-    dataInventory = []
-
-    for line in lines:
-        n = 0
-        line_data = ['']
-        for char in line:
-            if char == ';':
-                line_data += ['']
-                n += 1
-            elif char != '\n':
-                line_data[n] += char
-
-        dataInventory += [line_data]
-
-    return dataInventory
+        return dataRiwayat
