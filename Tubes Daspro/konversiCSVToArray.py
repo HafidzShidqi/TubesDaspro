@@ -48,7 +48,7 @@ if folderName != False:
 
     def riwayatCSVToArray():
         global dataRiwayat
-        f = open(f"{folderName}/user.csv", "r")
+        f = open(f"{folderName}/riwayat.csv", "r")
         lines = f.readlines()
         f.close()
 
@@ -67,3 +67,25 @@ if folderName != False:
             dataRiwayat += [line_data]
 
         return dataRiwayat
+
+    def kepemilikanCSVToArray():
+        global dataKepemilikan
+        f = open(f"{folderName}/kepemilikan.csv", "r")
+        lines = f.readlines()
+        f.close()
+
+        dataKepemilikan = []
+
+        for line in lines:
+            n = 0
+            line_data = ['']
+            for char in line:
+                if char == ';':
+                    line_data += ['']
+                    n += 1
+                elif char != '\n':
+                    line_data[n] += char
+
+            dataKepemilikan += [line_data]
+
+        return dataKepemilikan

@@ -1,30 +1,20 @@
-from konversiCSVToArray import *
 from fungsi import *
 
-def search_game_at_store ():
-    gameid_search = input("Masukkan ID game: ")
-    namagame_search = input("Masukkan nama game: ")
-    harga_search = input("Masukkan harga game: ")
-    kategori_search = input("Masukkan kategori game: ")
-    trilis_search = input("Masukkan tahun rilis: ")
+def search_game_at_store(dataGame):
+    idGame = input("Masukkan ID Game: ")
+    namaGame = input("Masukkan Nama Game: ")
+    hargaGame = input("Masukkan Harga Game: ")
+    kategoriGame = input("Masukkan Kategori Game: ")
+    tahunRilis = input("Masukkan Tahun Rilis Game: ")
 
-    if gameid_search != '':   
-        for i in range (Length(dataGame)):
-            if gameid_search == dataGame[i][0]:
-                printRapih(dataGame[i])
-    elif namagame_search != '':   
-        for i in range (Length(dataGame)):
-            if namagame_search == dataGame[i][1]:
-                printRapih(dataGame[i])
-    elif harga_search != '':  
-        for i in range (Length(dataGame)):
-            if harga_search == dataGame[i][4]:
-                printRapih(dataGame[i])
-    elif kategori_search != '':
-        for i in range (Length(dataGame)):
-            if kategori_search == dataGame[i][2]:
-                printRapih(dataGame[i])
-    elif trilis_search != '':
-        for i in range (Length(dataGame[i])):
-            if trilis_search == dataGame[i][3]:
-                printRapih(dataGame[i])
+    index = 0
+    valid = False
+    for i in range(1,Length(dataGame)):
+        if (dataGame[i][0] == idGame or not idGame) and (dataGame[i][1] == namaGame or not namaGame) and (dataGame[i][4] == hargaGame or not hargaGame) and (dataGame[i][2] == kategoriGame or not kategoriGame) and (dataGame[i][3] == tahunRilis or not tahunRilis):
+            valid = True
+            index += 1
+            printRapihF11(dataGame, i, index)
+    
+    if valid == False:
+        print("Tidak ada game dengan spesifikasi tersebut!")
+    

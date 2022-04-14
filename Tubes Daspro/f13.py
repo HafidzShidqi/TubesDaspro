@@ -1,8 +1,11 @@
-from konversiCSVTArray import *
 from fungsi import *
 
-def riwayat ():
-    if dataRiwayat != []:
-        printRapih(dataRiwayat)
-    else:
-        print("Maaf, kamu tidak ada riwayat pembelian. Ketik perintah beli_game untuk membeli.")
+def riwayat(user, dataRiwayat):
+    index = 0
+    for i in range(1, Length(dataRiwayat)):
+        if dataRiwayat[i][3] == user:
+            index += 1
+            printRapihF13(dataRiwayat, i, index)
+    if index == 0:
+        print("Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
+

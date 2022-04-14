@@ -1,5 +1,5 @@
 id;username;nama;password;role;saldo
-USER001;16521292_HS;Hafidz Shidqi;yukmainbinomo1;Admin;1000
-USER002;16521373_NNF;Noor Nisa F;yukmainbinomo2;Admin;1000
-USER003;16521409_MHH;M Habibi Husni;yukmainbinomo3;User;1000
-USER004;16521229_SS;Shelma Salsabila;yukmainbinomo4;User;1000
+USER001;hafidz;Hafidz Shidqi;123456;Admin;1000
+USER002;nisa;Noor Nisa F;123456;Admin;1000
+USER003;habibi;M Habibi Husni;123456;User;100000
+USER004;shelma;Shelma Salsabila;123456;User;1000

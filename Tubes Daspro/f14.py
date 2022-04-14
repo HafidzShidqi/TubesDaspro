@@ -1,3 +1,5 @@
+from f03 import *
+
 def help(role):
     if role == "Admin":
         print("""
@@ -26,3 +28,4 @@ def help(role):
 8. save - Untuk melakukan penyimpanan data ke dalam file setelah dilakukan perubahan
 9. exit - Untuk keluar dari aplikasi
 """)
+
