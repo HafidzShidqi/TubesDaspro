@@ -16,5 +16,5 @@ def search_game_at_store(dataGame):
             printRapihF11(dataGame, i, index)
     
     if valid == False:
-        print("Tidak ada game dengan spesifikasi tersebut!")
+        print("\nTidak ada game dengan spesifikasi tersebut!\n")
     

@@ -15,24 +15,27 @@ def sortingAscending(array, atribut):
                 array[j], array[j+1] = array[j+1], array[j]
     return array
 
+def sortingAscendingByGameId(array):
+    for i in range(1, Length(array)-1):
+        for j in range(1, Length(array)-1):
+            if getIndexID(array[j][0]) > getIndexID(array[j+1][0]):
+                array[j], array[j+1] = array[j+1], array[j]
+    return array
+
+
 def list_game_toko(dataGame):
     skema = input("Skema sorting : ")
     if skema == 'tahun+':
-        dataGame = sortingAscending(dataGame, 3)
-        printRapihF07(dataGame)
+        printRapihF07(sortingAscending(dataGame, 3))
     elif skema == 'tahun-':
-        dataGame = sortingDescending(dataGame, 3)
-        printRapihF07(dataGame)
+        printRapihF07(sortingDescending(dataGame, 3))
     elif skema == 'harga+':
-        dataGame = sortingAscending(dataGame, 4)
-        printRapihF07(dataGame)
+        printRapihF07(sortingAscending(dataGame, 4))
     elif skema == 'harga-':
-        dataGame = sortingDescending(dataGame, 4)
-        printRapihF07(dataGame)
+        printRapihF07(sortingDescending(dataGame, 4))
     elif skema == '':
-        dataGame = sortingAscending(dataGame,0)
+        printRapihF07(sortingAscendingByGameId(dataGame))
     else:
         print("\nSkema sorting tidak valid!\n")
-    return dataGame
-
+    return sortingAscendingByGameId(dataGame)
 

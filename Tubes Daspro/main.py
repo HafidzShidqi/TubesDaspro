@@ -34,34 +34,35 @@ if f15.bisaLogin == True:
             perintah = input(">>>")
             if perintah == "login":
                 print("Anda sudah login.\n")
-            elif perintah == "help":
-                f14.help(role)
             elif perintah == "register":
                 dataUser = f02.register(dataUser)
-                print(dataUser)       # menjalankan register dan datanya disimpan dalam memori
             elif perintah == "tambah_game":
-                dataGame = f04.tambah_game()    # menjalankan tambah_game dan datanya disimpan dalam memori
+                dataGame = f04.tambah_game()    
             elif perintah == "ubah_game":
-                dataGame = f05.ubah_game(dataGame) # menjalankan ubah_game dan datanya disimpan dalam memori
+                dataGame = f05.ubah_game(dataGame) 
             elif perintah == "ubah_stok":
-                dataGame = f06.ubah_stok(dataGame) # menjalankan ubah_stok dan datanya disimpan dalam memori
+                dataGame = f06.ubah_stok(dataGame) 
             elif perintah == "list_game_toko":
-                dataGame = f07.list_game_toko(dataGame) # menjalankan list_game_toko
+                dataGame = f07.list_game_toko(dataGame) 
             elif perintah == "search_game_at_store":
                 f11.search_game_at_store(dataGame)
             elif perintah == "topup":
                 dataUser = f12.topup(dataUser)
+            elif perintah == "help":
+                f14.help(role)
             elif perintah == "exit":
-                f17.exit(dataGame, dataUser, dataKepemilikan, dataRiwayat)    # menjalankan exit 
-                checkExit = True                # dan akan keluar dari program
-            else:   # jika perintah selain di atas, maka perintah tersebut hanya bisa diakses oleh 'User'
+                f17.exit(dataGame, dataUser, dataKepemilikan, dataRiwayat)    
+                checkExit = True                
+            elif perintah == "buy_game" or perintah == "list_game" or perintah == "search_my_game" or perintah == "riwayat":
                 print("Perintah hanya bisa dilakukan oleh User\n")  
+            else:
+                print("Tidak mengenali perintah!\n")
         elif role == 'User':
             perintah = input(">>>")
             if perintah == "login":
                 print("Anda sudah login.\n")
             elif perintah == "list_game_toko":
-                dataGame = f07.list_game_toko(dataGame)
+                dataGame = f07.list_game_toko(dataGame) 
             elif perintah == "buy_game":
                 print(f'Saldo sekarang : {dataUser[getIndexID(f03.userid)][-1]}')
                 dataGame, dataUser, dataKepemilikan, dataRiwayat = f08.buy_game(f03.userid, dataGame, dataUser, dataKepemilikan, dataRiwayat)
@@ -78,8 +79,10 @@ if f15.bisaLogin == True:
             elif perintah == "exit":
                 f17.exit(dataGame, dataUser, dataKepemilikan, dataRiwayat) 
                 checkExit = True
+            elif perintah == "register" or perintah == "tambah_game" or perintah == "ubah_game" or perintah == "ubah_stok" or perintah == "topup":
+                print("Perintah hanya bisa dilakukan oleh Admin\n")
             else:
-                print("Perintah hanya bisa dilakukan oleh Admin")
+                print("Tidak mengenali perintah!\n")
         
                 
 

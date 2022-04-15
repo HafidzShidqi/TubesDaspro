@@ -14,6 +14,12 @@ def tambah_game():
     if nama == '' or kategori == '' or tahun_rilis == '' or harga == '' or stok_awal == '':
         print("\nMohon masukkan semua informasi mengenai game agar dapat disimpan BNMO.\n")
         tambah_game()
+    elif isNum(tahun_rilis) == False or isNum(harga) == False or isNum(stok_awal) == False:
+        print("\nTahun Rilis atau Harga atau Stok Awal harus berupa integer!")
+        tambah_game()
+    elif int(tahun_rilis) < 0 or int(harga) < 0 or int(stok_awal) < 0:
+        print("\nTahun Rilis atau Harga atau Stok Awal tidak boleh bernilai negatif!")
+        tambah_game()
     else:
         print(f"\nSelamat! Berhasil menambahkan game {nama}\n")
         id = str(Length(dataGame))

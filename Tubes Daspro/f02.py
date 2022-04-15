@@ -2,11 +2,17 @@ from konversiCSVToArray import *
 from fungsi import *
 
 def isUsernameValid(username):
+    nonValid = 0
     for i in username:
         if ( (ord(i) == 45) or (47 < ord(i) < 58) or (64 < ord(i) < 91) or (ord(i) == 95) or (96 < ord(i) < 123)):
-            return True
+            continue
         else:
-            return False
+            nonValid += 1
+    
+    if nonValid == 0:
+        return True
+    else:
+        return False
 
 def register(dataUser):
     nama = input("Masukan nama: ")
