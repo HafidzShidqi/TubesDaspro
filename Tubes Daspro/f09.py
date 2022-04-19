@@ -8,5 +8,6 @@ def list_game(user, dataKepemilikan, dataGame):
                 if dataKepemilikan[i][0] == dataGame[j][0]:
                     index += 1
                     printRapihF09(dataGame, j, index)
+    print()
     if index == 0:
-        print("Maaf, kamu belum membeli game. Ketik perintah beli_game untuk beli.")
+        print("Maaf, kamu belum membeli game. Ketik perintah beli_game untuk beli.\n")

@@ -10,7 +10,7 @@ def load():
 
     if not args.folderName:
         print("""Tidak ada nama folder yang diberikan!
-        Usage: python program_binomo.py <nama_folder>""")
+Usage: python program_binomo.py <nama_folder>""")
         bisaLogin = False
         return False
     else:

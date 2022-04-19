@@ -22,7 +22,7 @@ if f15.bisaLogin == True:
             # Akan meminta input, dan hanya berjalan jika input perintah == login
             perintah = input(">>>")
             if perintah == "login":
-                role = f03.login()  # f03.login() akan mereturn value "Admin" atau "User"
+                role = f03.login(dataUser)  # f03.login() akan mereturn value "Admin" atau "User"
                 isLogin = True      # bernilai True sehingga akan keluar dari looping isLogin
             else:
                 print('Maaf, anda harus login terlebih dahulu untuk mengirim perintah selain “login”\n')

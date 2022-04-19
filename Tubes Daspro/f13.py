@@ -6,6 +6,7 @@ def riwayat(user, dataRiwayat):
         if dataRiwayat[i][3] == user:
             index += 1
             printRapihF13(dataRiwayat, i, index)
+    print()
     if index == 0:
-        print("Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.")
+        print("Maaf, kamu tidak ada riwayat pembelian game. Ketik perintah beli_game untuk membeli.\n")
 

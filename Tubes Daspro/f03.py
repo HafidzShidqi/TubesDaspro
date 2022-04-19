@@ -1,9 +1,6 @@
 from fungsi import *
-from konversiCSVToArray import *
 
-dataUser = UserCSVToArray()
-
-def login():
+def login(dataUser):
     global userid
     username = input("Masukan username: ")
     password = input("Masukan password: ")
@@ -18,7 +15,7 @@ def login():
 
     if valid == False:
         print("\nPassword atau username salah atau tidak ditemukan\n")
-        return login()
+        return login(dataUser)
     else:
         print(f'\nHalo {dataUser[j][2]}! Selamat datang di "Binomo".\n')
         userid = dataUser[j][0]

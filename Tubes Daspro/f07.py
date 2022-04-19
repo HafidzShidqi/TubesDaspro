@@ -27,14 +27,19 @@ def list_game_toko(dataGame):
     skema = input("Skema sorting : ")
     if skema == 'tahun+':
         printRapihF07(sortingAscending(dataGame, 3))
+        print()
     elif skema == 'tahun-':
         printRapihF07(sortingDescending(dataGame, 3))
+        print()
     elif skema == 'harga+':
         printRapihF07(sortingAscending(dataGame, 4))
+        print()
     elif skema == 'harga-':
         printRapihF07(sortingDescending(dataGame, 4))
+        print()
     elif skema == '':
         printRapihF07(sortingAscendingByGameId(dataGame))
+        print()
     else:
         print("\nSkema sorting tidak valid!\n")
     return sortingAscendingByGameId(dataGame)

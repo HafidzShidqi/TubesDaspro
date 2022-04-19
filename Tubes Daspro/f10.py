@@ -17,8 +17,9 @@ def search_my_game(userid, dataKepemilikan, dataGame):
         if (arrayKepemilikan[i][0] == idGame or not idGame) and (arrayKepemilikan[i][3] == tahunRilis or not tahunRilis):
             index += 1
             printRapihF10(arrayKepemilikan, i, index)
+    print()
     if index == 0:
-        print("Tidak ada game pada inventory-mu yang memenuhi kriteria")
+        print("Tidak ada game pada inventory-mu yang memenuhi kriteria\n")
 
             
 

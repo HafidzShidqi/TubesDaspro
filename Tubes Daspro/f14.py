@@ -12,8 +12,7 @@ def help(role):
 6. list_game_toko - Untuk melihat list game yang dijual pada toko berdasarkan skema tahun rilis atau harga
 7. search_game_at_store - Untuk mencari game pada toko dengan menginput 5 parameter yang bersifat tidak wajib
 8. topup - Untuk menambah saldo kepada user
-9. save - Untuk melakukan penyimpanan data ke dalam file setelah dilakukan perubahan
-10. exit - Untuk keluar dari aplikasi
+9. exit - Untuk keluar dari aplikasi
 """)
     else:
         print("""
@@ -25,7 +24,6 @@ def help(role):
 5. search_my_game - Untuk mendapatkan informasi game yang dimiliki pengguna sesuai dengan query dari parameter yang diinput
 6. search_game_at_store - Untuk mencari game pada toko dengan menginput 5 parameter yang bersifat tidak wajib
 7. riwayat - Untuk melihat pembelian game dengan atribut (ID | Nama Game | Harga | Tahun Beli)
-8. save - Untuk melakukan penyimpanan data ke dalam file setelah dilakukan perubahan
-9. exit - Untuk keluar dari aplikasi
+8. exit - Untuk keluar dari aplikasi
 """)
 
