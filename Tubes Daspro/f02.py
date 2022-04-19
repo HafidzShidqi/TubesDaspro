@@ -1,6 +1,7 @@
 from konversiCSVToArray import *
 from fungsi import *
 
+#Validasi username, username hanya boleh berisi alphabet, numerik 0-9, tanda hubung, dan underscore
 def isUsernameValid(username):
     nonValid = 0
     for i in username:
@@ -14,14 +15,15 @@ def isUsernameValid(username):
     else:
         return False
 
+#Fungsi register
 def register(dataUser):
     nama = input("Masukan nama: ")
     username = input("Masukan username: ")
     password = input("Masukan password: ")
         
-    terpakai = False    
+    terpakai = False            #inisialisasi
 
-    for i in range(1,Length(dataUser)):
+    for i in range(1,Length(dataUser)):                 
         if str(dataUser[i][1]) == str(username):
             terpakai = True
 
