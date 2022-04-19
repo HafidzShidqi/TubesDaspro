@@ -5,7 +5,7 @@ def login(dataUser):
     username = input("Masukan username: ")
     password = input("Masukan password: ")
     
-    j = 0
+    j = 0   #inisialisasi
     valid = False       #inisialisasi
     for i in range(1,Length(dataUser)):
         if dataUser[i][1] == username and dataUser[i][3] == password:
