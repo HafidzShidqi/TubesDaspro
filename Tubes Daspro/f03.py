@@ -17,7 +17,7 @@ def login(dataUser):
         print("\nPassword atau username salah atau tidak ditemukan\n")
         return login(dataUser)      #memanggil fungsi login lagi
     else: #jika username dan password sesuai
-        print(f'\nHalo {dataUser[j][2]}! Selamat datang di "Binomo".\n')    
+        print(f'\nHalo {dataUser[j][2]}! Selamat datang di "Binomo".\n')    #dataUser[j][2] untuk menampilkan nama user
         userid = dataUser[j][0]     
         return dataUser[j][4]
 
