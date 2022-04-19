@@ -8,7 +8,7 @@ def ubah_stok(dataGame):
     for i in range(Length(dataGame)):
         if dataGame[i][0] == id:    #cek id
             foundID = True          #jika id ditemukan di data game.csv
-            stok = int(dataGame[i][-1])
+            stok = int(dataGame[i][-1]) #mengakses stok yang ada pada kolom terakhir di dataGame
             if stok + jumlah < 0:       
                 print(f"Stok game {dataGame[i][1]} gagal dikurangi karena stok kurang. Stok sekarang: {dataGame[i][-1]} (< {jumlah * -1})\n")
             else:
