@@ -4,12 +4,12 @@ from fungsi import *
 def ubah_stok(dataGame):
     id = input("Masukkan ID game: ")
     jumlah = int(input("Masukkan jumlah: "))
-    foundID = False
+    foundID = False     #inisialisasi
     for i in range(Length(dataGame)):
-        if dataGame[i][0] == id:
-            foundID = True
+        if dataGame[i][0] == id:    #cek id
+            foundID = True          #jika id ditemukan di data game.csv
             stok = int(dataGame[i][-1])
-            if stok + jumlah < 0:
+            if stok + jumlah < 0:       
                 print(f"Stok game {dataGame[i][1]} gagal dikurangi karena stok kurang. Stok sekarang: {dataGame[i][-1]} (< {jumlah * -1})\n")
             else:
                 if jumlah < 0:
@@ -18,7 +18,7 @@ def ubah_stok(dataGame):
                 else:
                     dataGame[i][-1] = str(stok + jumlah)
                     print(f"Stok game {dataGame[i][1]} berhasil ditambahkan. Stok sekarang: {stok + jumlah}\n")
-    if foundID == False:
+    if foundID == False:    #jika id tidak ditemukan di data game.csv
         print("\nTidak ada game dengan ID tersebut!")
     return dataGame
 
