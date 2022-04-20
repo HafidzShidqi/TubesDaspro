@@ -20,7 +20,7 @@ if f15.bisaLogin == True:
         # Melakukan looping selama belum login
         while isLogin == False:
             # Akan meminta input, dan hanya berjalan jika input perintah == login
-            perintah = input(">>>")
+            perintah = input(">>> ")
             if perintah == "login":
                 role = f03.login(dataUser)  # f03.login() akan mereturn value "Admin" atau "User"
                 isLogin = True      # bernilai True sehingga akan keluar dari looping isLogin
@@ -31,13 +31,13 @@ if f15.bisaLogin == True:
 
         # jika rolenya Admin, maka check perintah yang bisa dilakukan oleh admin dan menjalankan perintahnya
         if role == 'Admin':
-            perintah = input(">>>")
+            perintah = input(">>> ")
             if perintah == "login":
                 print("Anda sudah login.\n")
             elif perintah == "register":
                 dataUser = f02.register(dataUser)
             elif perintah == "tambah_game":
-                dataGame = f04.tambah_game()    
+                dataGame = f04.tambah_game(dataGame)    
             elif perintah == "ubah_game":
                 dataGame = f05.ubah_game(dataGame) 
             elif perintah == "ubah_stok":
@@ -58,7 +58,7 @@ if f15.bisaLogin == True:
             else:
                 print("Tidak mengenali perintah!\n")
         elif role == 'User':
-            perintah = input(">>>")
+            perintah = input(">>> ")
             if perintah == "login":
                 print("Anda sudah login.\n")
             elif perintah == "list_game_toko":

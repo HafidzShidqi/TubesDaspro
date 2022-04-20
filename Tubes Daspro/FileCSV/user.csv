@@ -3,3 +3,5 @@ USER001;hafidz;Hafidz Shidqi;123456;Admin;1000
 USER002;nisa;Noor Nisa F;123456;Admin;1000
 USER003;habibi;M Habibi Husni;123456;User;100000
 USER004;shelma;Shelma Salsabila;123456;User;1000
+USER005;admin;ADMIN;admin;Admin;9999
+USER006;user;USER;user;User;1000
