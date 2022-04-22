@@ -24,4 +24,3 @@ def tambah_game(dataGame):
             break
 
     return dataGame
-

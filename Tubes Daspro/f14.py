@@ -1,6 +1,15 @@
 from f03 import *
 
 def help(role):
+
+    # procedure help (input role : string)
+    # {I.S. Pengguna mengetik perintah "help"}
+    # {F.S. Akan muncul di layar fungsi beserta spesifikasinya sesuai dengan role pengguna}
+
+    # KAMUS LOKAL
+    # -
+
+    # ALGORITMA UTAMA
     if role == "Admin":
         print("""
 ============ HELP ============

@@ -1,4 +1,3 @@
-from konversiCSVToArray import *
 from fungsi import *
 
 def sortingDescending(array, atribut):

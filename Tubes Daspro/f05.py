@@ -1,4 +1,3 @@
-from konversiCSVToArray import *
 from fungsi import *
 
 def ubah_game(dataGame):
@@ -7,11 +6,11 @@ def ubah_game(dataGame):
     kategori = input("Masukkan kategori: ")
     tahun_rilis = input("Masukkan tahun rilis: ")
     harga = input("Masukkan harga: ")
-    foundID = False     #inisialisasi
+    foundID = False
     for i in range(Length(dataGame)):
-        if dataGame[i][0] == id:        #cek id
+        if dataGame[i][0] == id:
             foundID = True
-            if nama != '':              #jika input "" maka datanya akan sama dengan data awal
+            if nama != '':
                 dataGame[i][1] = nama
             if kategori != '':
                 dataGame[i][2] = kategori
@@ -20,9 +19,9 @@ def ubah_game(dataGame):
             if harga != '':
                 dataGame[i][4] = harga
 
-    if foundID == False: #jika id tidak ada di data
+    if foundID == False:
         print("\nTidak ada game dengan ID tersebut!\n")
-    else: #jika id ada di data
+    else:
         print("\nBerhasil mengubah game!\n")
     
     return dataGame

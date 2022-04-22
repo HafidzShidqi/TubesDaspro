@@ -1,26 +1,30 @@
 import f15, konversiCSVToArray
 from fungsi import *
-import argparse, os
 
 
 # f15.load() akan mereturn bisaLogin yang akan bernilai True jika nama folder valid dan program akan berjalan
 if f15.bisaLogin == True:
-    import f02, f03, f04, f05, f06, f07, f08, f09, f10, f11, f12, f13, f14, f16, f17, konversiArrayToCSV
-    # Deklarasi variabel sebagai tanda 
+
+    import f02, f03, f04, f05, f06, f07, f08, f09, f10, f11, f12, f13, f14, f17
+    
+    # Deklarasi variabel sebagai penanda
     checkExit = False
     isLogin = False
+
     # Mengubah CSV ke bentuk array dan disimpan dalam memori
     dataGame = konversiCSVToArray.GameCSVToArray()
     dataUser = konversiCSVToArray.UserCSVToArray()
     dataKepemilikan = konversiCSVToArray.kepemilikanCSVToArray()
     dataRiwayat = konversiCSVToArray.riwayatCSVToArray()
+
     # Melakukan looping selama belum menjalankan perintah exit
     while checkExit == False:
 
         # Melakukan looping selama belum login
         while isLogin == False:
+
             # Akan meminta input, dan hanya berjalan jika input perintah == login
-            perintah = input(">>> ")
+            perintah = input(">>>")
             if perintah == "login":
                 role = f03.login(dataUser)  # f03.login() akan mereturn value "Admin" atau "User"
                 isLogin = True      # bernilai True sehingga akan keluar dari looping isLogin
@@ -31,7 +35,7 @@ if f15.bisaLogin == True:
 
         # jika rolenya Admin, maka check perintah yang bisa dilakukan oleh admin dan menjalankan perintahnya
         if role == 'Admin':
-            perintah = input(">>> ")
+            perintah = input(">>>")
             if perintah == "login":
                 print("Anda sudah login.\n")
             elif perintah == "register":
@@ -57,8 +61,8 @@ if f15.bisaLogin == True:
                 print("Perintah hanya bisa dilakukan oleh User\n")  
             else:
                 print("Tidak mengenali perintah!\n")
-        elif role == 'User':
-            perintah = input(">>> ")
+        elif role == 'User': # jika rolenya User, maka check perintah yang bisa dilakukan oleh admin dan menjalankan perintahnya
+            perintah = input(">>>")
             if perintah == "login":
                 print("Anda sudah login.\n")
             elif perintah == "list_game_toko":

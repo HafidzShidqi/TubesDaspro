@@ -1,7 +1,6 @@
 from f16 import *
 from konversiArrayToCSV import *
 
-
 def exit(dataGame, dataUser, dataKepemilikan, dataRiwayat):
     
     # procedure exit (input dataGame : array, input dataUser : array)
@@ -13,6 +12,7 @@ def exit(dataGame, dataUser, dataKepemilikan, dataRiwayat):
     # askExit : string
 
     # ALGORITMA UTAMA
+    # Looping untuk validasi jawaban ingin menyimpan file atau tidak
     while True:
         askExit = input("Apakah Anda mau melakukan penyimpanan file yang sudah diubah? (y/n) ")
         if askExit == "Y" or askExit == "y":
