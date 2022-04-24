@@ -1,9 +1,10 @@
 # Deklarasi fungsi inputGiliran yang memvalidasi input posisi x,y dari User
+
 def inputGiliran():
     x = int(input("X: "))
     y = int(input("Y: "))
     while x > 3 or y > 3 or x < 1 or y < 1:
-        print("Kotak tidak valid.")
+        print("Kotak tidak valid.\n")
         x = int(input("X: "))
         y = int(input("Y: "))
     return x,y
@@ -18,8 +19,20 @@ def cetakPapan():
 # Deklarasi fungsi checkMenang, yaitu mengcheck kondisi menang jika terpenuhi
 def checkMenang(Pemain):
     for i in range(3):
-        if (papan[i][0] == papan[i][1] == papan[i][2] == Pemain) or (papan[0][i] == papan[1][i] == papan[2][i] == Pemain) or (papan[0][0] == papan[1][1] == papan[2][2] == Pemain) or (papan[2][1] == papan[1][1] == papan[0][2] == Pemain):
-            print(f'\nPemain "{Pemain}" menang.')
+        if (papan[i][0] == papan[i][1] == papan[i][2] == Pemain):
+            kondisi = 'horizontal'
+            print(f'\n{Pemain} menang secara {kondisi}.')
+            print(f"Kemenangan {kondisi} berlaku pada kolom lain")
+            return True
+        elif (papan[0][i] == papan[1][i] == papan[2][i] == Pemain):
+            kondisi = 'vertikal'
+            print(f'\n{Pemain} menang secara {kondisi}.')
+            print(f"Kemenangan {kondisi} berlaku pada kolom lain")
+            return True
+        elif (papan[0][0] == papan[1][1] == papan[2][2] == Pemain) or (papan[2][0] == papan[1][1] == papan[0][2] == Pemain):
+            kondisi = 'diagonal'
+            print(f'\n{Pemain} menang secara {kondisi}.')
+            print(f"Kemenangan {kondisi} berlaku pada {kondisi} yang sebaliknya.")
             return True
 
 # Deklarasi fungsi checkTerisi, yaitu mengecheck apakah suatu kotak sudah terisi atau belum
