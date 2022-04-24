@@ -2,6 +2,7 @@ from fungsi import *
 
 def search_my_game(userid, dataKepemilikan, dataGame):
     # Procedure search_my_game(input userid : string, dataKepemilikan : array, dataGame : array)
+    # procedure untuk mencari game yang telah dimiliki berdasarkan input id game atau/dan tahun rilis
     # I.S pengguna memasukan id atau/dan tahun dari game yang ingin dicari
     # F.S pada layar muncul game yang dicari
     
