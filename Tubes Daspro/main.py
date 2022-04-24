@@ -1,3 +1,4 @@
+from f14 import helpNotLogin
 import f15, konversiCSVToArray
 from fungsi import *
 
@@ -28,6 +29,11 @@ if f15.bisaLogin == True:
             if perintah == "login":
                 role = f03.login(dataUser)  # f03.login() akan mereturn value "Admin" atau "User"
                 isLogin = True      # bernilai True sehingga akan keluar dari looping isLogin
+            elif perintah == "help":
+                helpNotLogin()
+            elif perintah == "exit":
+                f17.exit(dataGame, dataUser, dataKepemilikan, dataRiwayat) 
+                checkExit = True
             else:
                 print('Maaf, anda harus login terlebih dahulu untuk mengirim perintah selain “login”\n')
         

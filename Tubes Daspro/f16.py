@@ -3,7 +3,7 @@ import os
 
 def createFolder(folderName):
 
-    # procedure createFolder (input folderNmae : string,  output path : string)
+    # procedure createFolder (input folderName : string,  output path : string)
     # prosedur yang membuat folder dengan nama folder = "folderName" berupa input dari pengguna
     # {I.S. Menerima input "folderName" berupa string,   F.S. Membuat folder dengan nama "folderName"}
 
@@ -38,9 +38,9 @@ def checkIsFolderValid(folderName):
 
 def save(dataGame, dataUser, dataKepemilikan, dataRiwayat):
 
-    # procedure save (input/output dataGame : string,  input/ouput dataUser : string)
-    # {I.S. Menerima input dataGame dan dataUser}
-    # {F.S. Menyimpan dataGame pada game.csv, dataUser pada user.csv pada folder "newFolder" yang berupa input dari pengguna}
+    # procedure save (input/output dataGame : string,  input/ouput dataUser : string, input/output dataKepemilikan : string,  input/ouput dataRiwayat : string)
+    # {I.S. Menerima input dataGame, dataUser, dataKepemiliikan, dataRiwayat}
+    # {F.S. Menyimpan dataGame pada game.csv, dataUser pada user.csv, dataKepemilikan pada kepemilikan.csv, dataRiwayat pada riwayat.csv pada folder "newFolder" yang berupa input dari pengguna}
 
     # KAMUS LOKAL
     # newFolder : string

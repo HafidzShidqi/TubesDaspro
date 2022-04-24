@@ -1,5 +1,12 @@
 from f03 import *
 
+def helpNotLogin():
+    print("""
+    ============ HELP ============
+    1. login - Untuk melakukan login ke dalam sistem
+    2. exit - Untuk keluar dari aplikasi
+    """)
+
 def help(role):
 
     # procedure help (input role : string)

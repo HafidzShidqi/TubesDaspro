@@ -3,10 +3,10 @@ from konversiArrayToCSV import *
 
 def exit(dataGame, dataUser, dataKepemilikan, dataRiwayat):
     
-    # procedure exit (input dataGame : array, input dataUser : array)
-    # {I.S. Menerima array dataGame dan dataUser dan validasi input apakah ingin menyimpan file atau tidak}
+    # procedure exit (input dataGame : array, input dataUser : array, input dataKepemilikan : array, input dataRiwayat : array)
+    # {I.S. Menerima Menerima matrix dataGame, dataUser, dataKepemilikan, dan dataRiwayat dan validasi apakah ingin menyimpan file atau tidak } 
     # {F.S. Jika user ingin menyimpan file, makan jalankan procedure save dan keluar dari program }
-    # {F.S. Jika user tidak ingin menyimpan file, maka akan keluar dari program}
+    # {F.S. Jika user tidak ingin menyimpan file, maka akan keluar dari pr 
 
     # KAMUS LOKAL
     # askExit : string
@@ -20,3 +20,5 @@ def exit(dataGame, dataUser, dataKepemilikan, dataRiwayat):
             break
         elif askExit == 'N' or askExit == 'n':
             break
+        else:
+            print('Hasil input tidak valid!\n')
