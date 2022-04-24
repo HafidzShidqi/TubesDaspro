@@ -1,4 +1,3 @@
-from f14 import helpNotLogin
 import f15, konversiCSVToArray
 from fungsi import *
 
@@ -6,7 +5,8 @@ from fungsi import *
 # f15.load() akan mereturn bisaLogin yang akan bernilai True jika nama folder valid dan program akan berjalan
 if f15.bisaLogin == True:
 
-    import f02, f03, f04, f05, f06, f07, f08, f09, f10, f11, f12, f13, f14, f17
+    import f02, f03, f04, f05, f06, f07, f08, f09, f10, f11, f12, f13, f14, f16, f17
+    from konversiArrayToCSV import *
     
     # Deklarasi variabel sebagai penanda
     checkExit = False
@@ -30,7 +30,7 @@ if f15.bisaLogin == True:
                 role = f03.login(dataUser)  # f03.login() akan mereturn value "Admin" atau "User"
                 isLogin = True      # bernilai True sehingga akan keluar dari looping isLogin
             elif perintah == "help":
-                helpNotLogin()
+                f14.helpNotLogin()
             elif perintah == "exit":
                 f17.exit(dataGame, dataUser, dataKepemilikan, dataRiwayat) 
                 checkExit = True
@@ -60,6 +60,8 @@ if f15.bisaLogin == True:
                 dataUser = f12.topup(dataUser)
             elif perintah == "help":
                 f14.help(role)
+            elif perintah == "save":
+                f16.save(GameArrayToCSV(dataGame),UserArrayToCSV(dataUser),KepemilikanArrayToCSV(dataKepemilikan),RiwayatArrayToCSV(dataRiwayat))
             elif perintah == "exit":
                 f17.exit(dataGame, dataUser, dataKepemilikan, dataRiwayat)    
                 checkExit = True                
@@ -86,6 +88,8 @@ if f15.bisaLogin == True:
                 f13.riwayat(f03.userid, dataRiwayat)
             elif perintah == "help":
                 f14.help(role)
+            elif perintah == "save":
+                f16.save(GameArrayToCSV(dataGame),UserArrayToCSV(dataUser),KepemilikanArrayToCSV(dataKepemilikan),RiwayatArrayToCSV(dataRiwayat))
             elif perintah == "exit":
                 f17.exit(dataGame, dataUser, dataKepemilikan, dataRiwayat) 
                 checkExit = True

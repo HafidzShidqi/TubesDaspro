@@ -73,6 +73,6 @@ def save(dataGame, dataUser, dataKepemilikan, dataRiwayat):
    
 
     print("\nSaving...")
-    print("Data telah disimpan pada folder", newFolder)
+    print(f"Data telah disimpan pada folder {newFolder}\n")
 
 

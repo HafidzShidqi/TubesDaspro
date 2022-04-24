@@ -10,4 +10,4 @@ def list_game(user, dataKepemilikan, dataGame):
                     printRapihF09(dataGame, j, index)
     print()
     if index == 0:
-        print("Maaf, kamu belum membeli game. Ketik perintah beli_game untuk beli.\n")
+        print("Maaf, kamu belum membeli game. Ketik perintah buy_game untuk beli.\n")

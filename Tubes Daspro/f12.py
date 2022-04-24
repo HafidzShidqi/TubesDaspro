@@ -26,7 +26,7 @@ def topup(dataUser):
         if valid1 ==  False:
             print(f'\nUsername "{username}" tidak ditemukan.\n')
         elif valid2 ==  False:
-            print("\nMasukan tidak valid.\n")
+            print(f"\nTidak bisa mengurangi saldo karena saldo {dataUser[i][1]} adalah {dataUser[i][-1]} < {saldo*-1} \n")
         elif valid1 == valid2 == True:
             dataUser[index][-1] = str(saldoAwal + saldo)
             if saldo > 0:
